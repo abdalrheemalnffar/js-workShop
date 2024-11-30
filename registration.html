@@ -1,28 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
     <nav>
-        <ul>
-            <li><a href="index.html"> homepage</a></li>
-            <li><a href="portofilo.html"> my profile</a></li>
-            <li><a href="registration.html"> registration page</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html"> homepage</a></li>
+        <li><a href="portofilo.html"> my profile</a></li>
+        <li><a href="registration.html"> registration page</a></li>
+      </ul>
     </nav>
     <header>
-        <h1>registration page</h1>
+      <h1>registration page</h1>
     </header>
-    <main></main>
+    <main>
+      <section>
+        <div class="container">
+          <div class="row justify-content-center">
+            <form id="registration-form" action="registration.html">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  name="userEmail"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="error-userEmail" class="form-text text-danger"></div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  name="userPassword"
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+                <div
+                  id="error-userPassword"
+                  class="form-text text-danger"
+                ></div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputFile" class="form-label"
+                  >Select your image</label
+                >
+                <input
+                  name="userFiles"
+                  type="file"
+                  class="form-control"
+                  id="exampleInputFile"
+                />
+                <div>
+                  <img class="img-fluid" src="" alt="" id="display-personalImage">
+                </div>
+                <div id="error-userFiles" class="form-text text-danger"></div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
-        <p>&copy; Copyright resved - 2024</p>
+      <p>&copy; Copyright resved - 2024</p>
     </footer>
     <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
+    <script src="assets/js/registration.js" type="module"></script>
+  </body>
 </html>
